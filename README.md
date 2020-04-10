@@ -44,3 +44,5 @@ appium
 C:\Users\kumar>appium
 
 C:\Users\kumar\AppData\Local\Android\Sdk\emulator>emulator -avd suman
+
+C:\Users\kumar\AppData\Local\Android\Sdk\tools\bin\uiautomatorviewer   application to find the xpath
