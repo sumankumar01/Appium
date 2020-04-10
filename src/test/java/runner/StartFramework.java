@@ -57,13 +57,20 @@ import com.google.common.collect.Multimap;
 import framework.ActivityCapture;
 import framework.Execute;
 import framework.Roots;
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.StartsActivity;
+import io.appium.java_client.events.api.general.AppiumWebDriverEventListener;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 import io.appium.java_client.android.AndroidDriver;
 
+
+
 public class StartFramework extends Roots {
+	
+	 private StartsActivity startsActivity;
 
 	@BeforeSuite(groups = { "Regression", "Sanity" })
 	public void Beforesuit() throws IOException {
@@ -114,6 +121,7 @@ public class StartFramework extends Roots {
 		extent.setAnalysisStrategy(AnalysisStrategy.TEST);
 		extent.setAnalysisStrategy(AnalysisStrategy.SUITE);
 		extent.setAnalysisStrategy(AnalysisStrategy.CLASS);
+		
 	}
 
 	@SuppressWarnings("deprecation")
@@ -132,7 +140,7 @@ public class StartFramework extends Roots {
 
 		ActivityCapture handle = null;
 		
-		EventFiringWebDriver driver1 = null;
+		//AppiumWebDriverEventListener driver1 = null;
 		if (Mode.equalsIgnoreCase("Native")) {
 			
 			
@@ -146,9 +154,12 @@ public class StartFramework extends Roots {
 					//cap.setCapability("autoGrantPermissions":True);
 					//cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.0");
 					cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
-					AndroidDriver<AndroidElement> ad=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+					 driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
 			   
-			  	
+				
+					 /*
+					 Activity activity = new Activity("io.appium.android.apis", ".ApiDemos");
+				        startsActivity.startActivity(activity);*/
 
 			
 		} 	
@@ -247,7 +258,7 @@ public class StartFramework extends Roots {
 
 						List<String> ls = new ArrayList<String>();
 					
-							Execute.run(map, TID, driver1, logger);
+							Execute.run(map, TID, driver, logger);
 
 						
 
@@ -401,7 +412,7 @@ public class StartFramework extends Roots {
 
 						List<String> ls = new ArrayList<String>();
 
-						Execute.run(map, TID, driver1, logger);
+						Execute.run(map, TID, driver, logger);
 						
 
 						break;

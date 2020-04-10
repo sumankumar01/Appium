@@ -50,7 +50,7 @@ public class Roots {
 	public static List<String> ApplicationMode =new ArrayList<String>();
 	public static List<String> Sanity =new ArrayList<String>();
 	public static Multimap<String, String> map = ArrayListMultimap.create();
-	public static AndroidDriver<AndroidElement>  driver;
+	public static AndroidDriver  driver;
 	public static String rpt;
 	public static String Scanario;
 	public static ExtentHtmlReporter htmlReporter;

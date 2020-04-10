@@ -9,10 +9,13 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import runner.StartFramework;
 
 public class testmethod {
@@ -26,7 +29,7 @@ public class testmethod {
 	static XSSFRow row=null;
 	static StringBuilder htmlBuilder = new StringBuilder();
 	static String url="suman";
-	public static void test(List ls,WebDriver driver,ExtentTest logger) throws IOException
+	public static void test(List ls,AndroidDriver driver,ExtentTest logger) throws IOException
 	{
 	
 		int n=ls.size();
@@ -64,11 +67,11 @@ public class testmethod {
 			        }catch(UnreachableBrowserException ubex){
 			            isClosed=true;
 			        }*/
-			String abcd=driver.getWindowHandle();
-			url="suman";
+			//String abcd=driver.getWindowHandle();
+			//url="suman";
 			try
 			{
-			 url=driver.getTitle();
+			// url=driver.getTitle();
 			 //String abc=driver.getCurrentUrl();
 			}
 			catch(Exception e)
@@ -94,7 +97,7 @@ public class testmethod {
 	  {
 		// logger.log(Status.FAIL, "Classs not found exception"+e);
 		
-		//System.out.println("Classs not found exception"+e.getMessage());
+		System.out.println(e);
 		BFrameworkQueryObjects.logStatus(driver,Status.FAIL, "Checking the class","Classs not found exceptio",e);
 
 		
@@ -119,7 +122,7 @@ public class testmethod {
 		
 		
 			//testdclassnameatarow=NoSeq[s];
-		method = obj.getClass().getMethod(Moduel,WebDriver.class,BFrameworkQueryObjects.class);
+		method = obj.getClass().getMethod(Moduel,AndroidDriver.class,BFrameworkQueryObjects.class);
 		
 		//Report.logstatus(driver,Status.INFO, "Method execution","sTART EXECUTING THE METHO");
 		//Report.logstatus(driver, LogStatus.FAIL, "Login to COPA Application", "LoginFailure",null);

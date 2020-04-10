@@ -11,13 +11,16 @@ import com.aventstack.extentreports.Status;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Multimap;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
 
 public class Execute {
 	
 	static String Moduel=null;
 	static String classname=null;
 	String testdclassnameatarow=null;
-	public static void run(Multimap map,String TID,WebDriver driver,ExtentTest logger) throws IOException, ReflectiveOperationException
+	public static void run(Multimap map,String TID,AndroidDriver driver,ExtentTest logger) throws IOException, ReflectiveOperationException
 	{
 		List<String> ls=new ArrayList<String>();
 		Collection<String> values = map.get(TID);
@@ -41,7 +44,7 @@ public class Execute {
 		String abc=driver.getCurrentUrl();*/
 			
 		testmethod.test(ls,driver,logger);
-		String dddd =driver.getTitle();
+		//String dddd =driver.getTitle();
 		//driver.getWindowHandle();*/
 		}
 		catch(Exception  e)
