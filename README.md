@@ -36,7 +36,7 @@ npm uninstall -g appium
 
 Appium – starts the server
 
-rahulonlinetutor@gmail.com
+
 
 -2.1 – Android 11
 appium
