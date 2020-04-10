@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="54943" started-at="2020-04-10T11:05:23Z" finished-at="2020-04-10T11:06:18Z">
+    <groups>
+      <group name="Regression">
+        <method signature="StartFramework.testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@3159c4b8]" name="testLogin" class="runner.StartFramework"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test name="Test" duration-ms="54943" started-at="2020-04-10T11:05:23Z" finished-at="2020-04-10T11:06:18Z">
+      <class name="runner.StartFramework">
+        <test-method status="PASS" signature="Beforesuit()[pri:0, instance:runner.StartFramework@3159c4b8]" name="Beforesuit" is-config="true" duration-ms="11" started-at="2020-04-10T16:35:23Z" finished-at="2020-04-10T16:35:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforesuit -->
+        <test-method status="PASS" signature="init(org.testng.ITestContext)[pri:0, instance:runner.StartFramework@3159c4b8]" name="init" is-config="true" duration-ms="416" started-at="2020-04-10T16:35:23Z" finished-at="2020-04-10T16:35:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@62435e70]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@3159c4b8]" name="testLogin" duration-ms="48118" started-at="2020-04-10T16:35:24Z" data-provider="hybridDataRegression" finished-at="2020-04-10T16:36:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Assign_1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Assign_1 Assign a role to a single user]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Native]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:runner.StartFramework@3159c4b8]" name="closeBrowser" is-config="true" duration-ms="1835" started-at="2020-04-10T16:36:12Z" finished-at="2020-04-10T16:36:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="endreport()[pri:0, instance:runner.StartFramework@3159c4b8]" name="endreport" is-config="true" duration-ms="4037" started-at="2020-04-10T16:36:14Z" finished-at="2020-04-10T16:36:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endreport -->
+      </class> <!-- runner.StartFramework -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

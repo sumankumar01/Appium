@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="runner.StartFramework">
+        <methods>
+          <include name="testLogin" invocation-numbers="0"/>
+          <include name="Beforesuit"/>
+          <include name="closeBrowser"/>
+          <include name="init"/>
+          <include name="endreport"/>
+        </methods>
+      </class> <!-- runner.StartFramework -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
