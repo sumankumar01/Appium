@@ -50,7 +50,10 @@ C:\Users\kumar\AppData\Local\Android\Sdk\tools\bin\uiautomatorviewer   applicati
 C:\Users\kumar\AppData\Local\Android\Sdk\platform-tools>adb install C:\Users\kumar\Downloads\General-Store.apk  -- install from cmd
 Performing Streamed Install
 Success
+
+
 Automatically entering the web view context on session start
+asd
 ----------------------------------------------------------------
 driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
