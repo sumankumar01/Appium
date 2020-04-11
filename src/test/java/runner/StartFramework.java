@@ -158,16 +158,34 @@ public class StartFramework extends Roots {
 			//File appDir = new File("src/test/resource");
 			     //File app = new File(appDir, "ApiDemos-debug.apk");
 			     DesiredCapabilities cap=new DesiredCapabilities();
-					cap.setCapability(MobileCapabilityType.DEVICE_NAME, "suman");
+			     if(prop.getProperty("Device").equalsIgnoreCase("RealDevice"))
+			     {
+			    	 cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
+			    	 
+			    	// cap.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
+						
+						cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+						
+						cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 140);
+						//cap.setCapability("autoGrantPermissions":True);
+						//cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.0");
+						cap.setCapability(MobileCapabilityType.APP, appname.getAbsolutePath());
+						 driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+				   
+			    	 
+			     }
+			     else
+			     {
+			    	 cap.setCapability(MobileCapabilityType.DEVICE_NAME, "suman");
+			    	 cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+						
+						cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 140);
+						//cap.setCapability("autoGrantPermissions":True);
+						//cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.0");
+						cap.setCapability(MobileCapabilityType.APP, appname.getAbsolutePath());
+						 driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+			     }
 					
-					cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-					
-					cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 140);
-					//cap.setCapability("autoGrantPermissions":True);
-					//cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.0");
-					cap.setCapability(MobileCapabilityType.APP, appname.getAbsolutePath());
-					 driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
-			   
 				
 					 
 					 driver = EventFiringWebDriverFactory.getEventFiringWebDriver(driver, new ActivityCapture()); 
@@ -181,6 +199,63 @@ public class StartFramework extends Roots {
 		} 	
 		else
 		{
+			
+
+			
+			File file = new File(Prop_COPA);
+			FileInputStream fs;
+
+			
+			fs = new FileInputStream(file);
+			Properties prop = new Properties();
+			prop.load(fs);
+			fs.close();
+
+
+			File appname=new File(prop.getProperty("AppName"));
+			//File appDir = new File("src/test/resource");
+			     //File app = new File(appDir, "ApiDemos-debug.apk");
+			     DesiredCapabilities cap=new DesiredCapabilities();
+			     if(prop.getProperty("Device").equalsIgnoreCase("RealDevice"))
+			     {
+			    	 cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
+			    	 
+			    	 cap.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
+						
+						cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+						
+						cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 140);
+						//cap.setCapability("autoGrantPermissions":True);
+						//cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.0");
+						//cap.setCapability(MobileCapabilityType.APP, appname.getAbsolutePath());
+						 driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+				   
+			    	 
+			     }
+			     else
+			     {
+			    	 cap.setCapability(MobileCapabilityType.DEVICE_NAME, "suman");
+			    	 cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+						
+						cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 140);
+						//cap.setCapability("autoGrantPermissions":True);
+						//cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.0");
+						cap.setCapability(MobileCapabilityType.APP, appname.getAbsolutePath());
+						 driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+			     }
+					
+				
+					 
+					 driver = EventFiringWebDriverFactory.getEventFiringWebDriver(driver, new ActivityCapture()); 
+							/*    new ElementListener());
+					 driver1=new ActivityCapture();
+					 
+					 Activity activity = new Activity("io.appium.android.apis", ".ApiDemos");
+				        startsActivity.startActivity(activity);*/
+
+			
+		
+			
 			
 		}
 		

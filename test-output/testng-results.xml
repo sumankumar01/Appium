@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="215240" started-at="2020-04-11T13:41:30Z" finished-at="2020-04-11T13:45:05Z">
+  <suite name="Suite" duration-ms="57935" started-at="2020-04-11T18:09:16Z" finished-at="2020-04-11T18:10:14Z">
     <groups>
       <group name="Regression">
-        <method signature="StartFramework.testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@49139829]" name="testLogin" class="runner.StartFramework"/>
+        <method signature="StartFramework.testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@72967906]" name="testLogin" class="runner.StartFramework"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Test" duration-ms="215240" started-at="2020-04-11T13:41:30Z" finished-at="2020-04-11T13:45:05Z">
+    <test name="Test" duration-ms="57935" started-at="2020-04-11T18:09:16Z" finished-at="2020-04-11T18:10:14Z">
       <class name="runner.StartFramework">
-        <test-method status="PASS" signature="Beforesuit()[pri:0, instance:runner.StartFramework@49139829]" name="Beforesuit" is-config="true" duration-ms="12" started-at="2020-04-11T19:11:30Z" finished-at="2020-04-11T19:11:30Z">
+        <test-method status="PASS" signature="Beforesuit()[pri:0, instance:runner.StartFramework@72967906]" name="Beforesuit" is-config="true" duration-ms="16" started-at="2020-04-11T23:39:16Z" finished-at="2020-04-11T23:39:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Beforesuit -->
-        <test-method status="PASS" signature="init(org.testng.ITestContext)[pri:0, instance:runner.StartFramework@49139829]" name="init" is-config="true" duration-ms="246" started-at="2020-04-11T19:11:30Z" finished-at="2020-04-11T19:11:30Z">
+        <test-method status="PASS" signature="init(org.testng.ITestContext)[pri:0, instance:runner.StartFramework@72967906]" name="init" is-config="true" duration-ms="197" started-at="2020-04-11T23:39:16Z" finished-at="2020-04-11T23:39:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1a21f43f]]>
+                <![CDATA[org.testng.TestRunner@67e0ff3a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@49139829]" name="testLogin" duration-ms="72521" started-at="2020-04-11T19:11:30Z" data-provider="hybridDataRegression" finished-at="2020-04-11T19:12:43Z">
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@72967906]" name="testLogin" duration-ms="56303" started-at="2020-04-11T23:39:17Z" data-provider="hybridDataRegression" finished-at="2020-04-11T23:40:13Z">
           <params>
             <param index="0">
               <value>
@@ -46,36 +46,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:runner.StartFramework@49139829]" name="closeBrowser" is-config="true" duration-ms="775" started-at="2020-04-11T19:12:43Z" finished-at="2020-04-11T19:12:44Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:runner.StartFramework@72967906]" name="closeBrowser" is-config="true" duration-ms="470" started-at="2020-04-11T23:40:13Z" finished-at="2020-04-11T23:40:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@49139829]" name="testLogin" duration-ms="139966" started-at="2020-04-11T19:12:44Z" data-provider="hybridDataRegression" finished-at="2020-04-11T19:15:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Mobile_General-Store1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[login to general store1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Native]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:runner.StartFramework@49139829]" name="closeBrowser" is-config="true" duration-ms="443" started-at="2020-04-11T19:15:04Z" finished-at="2020-04-11T19:15:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="endreport()[pri:0, instance:runner.StartFramework@49139829]" name="endreport" is-config="true" duration-ms="1014" started-at="2020-04-11T19:15:04Z" finished-at="2020-04-11T19:15:05Z">
+        <test-method status="PASS" signature="endreport()[pri:0, instance:runner.StartFramework@72967906]" name="endreport" is-config="true" duration-ms="703" started-at="2020-04-11T23:40:14Z" finished-at="2020-04-11T23:40:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endreport -->
