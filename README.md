@@ -46,3 +46,9 @@ C:\Users\kumar>appium
 C:\Users\kumar\AppData\Local\Android\Sdk\emulator>emulator -avd suman
 
 C:\Users\kumar\AppData\Local\Android\Sdk\tools\bin\uiautomatorviewer   application to find the xpath
+
+C:\Users\kumar\AppData\Local\Android\Sdk\platform-tools>adb install C:\Users\kumar\Downloads\General-Store.apk  -- install from cmd
+Performing Streamed Install
+Success
+
+
