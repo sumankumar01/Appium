@@ -76,3 +76,4 @@ Get Started with Remote Debugging Android Devices
 Connect Real android device to automation
 --------------------------------------
 https://developers.google.com/web/tools/chrome-devtools/remote-debugging
+We can't real android device using the teamviewer also using team viewer quick support
