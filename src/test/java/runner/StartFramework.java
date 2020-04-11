@@ -61,6 +61,7 @@ import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.StartsActivity;
+import io.appium.java_client.events.EventFiringWebDriverFactory;
 import io.appium.java_client.events.api.general.AppiumWebDriverEventListener;
 import io.appium.java_client.remote.MobileCapabilityType;
 
@@ -140,7 +141,7 @@ public class StartFramework extends Roots {
 
 		ActivityCapture handle = null;
 		
-		//AppiumWebDriverEventListener driver1 = null;
+		AppiumWebDriverEventListener driver1 = null;
 		if (Mode.equalsIgnoreCase("Native")) {
 			
 			
@@ -157,7 +158,11 @@ public class StartFramework extends Roots {
 					 driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
 			   
 				
-					 /*
+					 
+					 driver = EventFiringWebDriverFactory.getEventFiringWebDriver(driver, new ActivityCapture()); 
+							/*    new ElementListener());
+					 driver1=new ActivityCapture();
+					 
 					 Activity activity = new Activity("io.appium.android.apis", ".ApiDemos");
 				        startsActivity.startActivity(activity);*/
 
@@ -661,8 +666,8 @@ public class StartFramework extends Roots {
 			
 			
 			try {
-				driver.close();
-				driver.quit();
+				driver.closeApp();
+				//driver.quitApp();
 			} catch (Exception e) {
 			}
 			extent.flush();
