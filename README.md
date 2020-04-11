@@ -50,9 +50,8 @@ C:\Users\kumar\AppData\Local\Android\Sdk\tools\bin\uiautomatorviewer   applicati
 C:\Users\kumar\AppData\Local\Android\Sdk\platform-tools>adb install C:\Users\kumar\Downloads\General-Store.apk  -- install from cmd
 Performing Streamed Install
 Success
-----------------------------------------------------------------
 Automatically entering the web view context on session start
-
+----------------------------------------------------------------
 driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
 Set<String> contextNames = driver.getContextHandles();
@@ -69,4 +68,4 @@ driver.context("NATIVE_APP");
 // do more native testing if we want
 
 driver.quit();
--------------------------------------------------------------------
+
