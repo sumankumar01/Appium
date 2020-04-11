@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="50051" started-at="2020-04-11T07:47:53Z" finished-at="2020-04-11T07:48:43Z">
+  <suite name="Suite" duration-ms="215240" started-at="2020-04-11T13:41:30Z" finished-at="2020-04-11T13:45:05Z">
     <groups>
       <group name="Regression">
-        <method signature="StartFramework.testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@5649fd9b]" name="testLogin" class="runner.StartFramework"/>
+        <method signature="StartFramework.testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@49139829]" name="testLogin" class="runner.StartFramework"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Test" duration-ms="50051" started-at="2020-04-11T07:47:53Z" finished-at="2020-04-11T07:48:43Z">
+    <test name="Test" duration-ms="215240" started-at="2020-04-11T13:41:30Z" finished-at="2020-04-11T13:45:05Z">
       <class name="runner.StartFramework">
-        <test-method status="PASS" signature="Beforesuit()[pri:0, instance:runner.StartFramework@5649fd9b]" name="Beforesuit" is-config="true" duration-ms="15" started-at="2020-04-11T13:17:53Z" finished-at="2020-04-11T13:17:53Z">
+        <test-method status="PASS" signature="Beforesuit()[pri:0, instance:runner.StartFramework@49139829]" name="Beforesuit" is-config="true" duration-ms="12" started-at="2020-04-11T19:11:30Z" finished-at="2020-04-11T19:11:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Beforesuit -->
-        <test-method status="PASS" signature="init(org.testng.ITestContext)[pri:0, instance:runner.StartFramework@5649fd9b]" name="init" is-config="true" duration-ms="236" started-at="2020-04-11T13:17:53Z" finished-at="2020-04-11T13:17:54Z">
+        <test-method status="PASS" signature="init(org.testng.ITestContext)[pri:0, instance:runner.StartFramework@49139829]" name="init" is-config="true" duration-ms="246" started-at="2020-04-11T19:11:30Z" finished-at="2020-04-11T19:11:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6a638c79]]>
+                <![CDATA[org.testng.TestRunner@1a21f43f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@5649fd9b]" name="testLogin" duration-ms="41559" started-at="2020-04-11T13:17:54Z" data-provider="hybridDataRegression" finished-at="2020-04-11T13:18:35Z">
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@49139829]" name="testLogin" duration-ms="72521" started-at="2020-04-11T19:11:30Z" data-provider="hybridDataRegression" finished-at="2020-04-11T19:12:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Mobile_1]]>
+                <![CDATA[Mobile_General-Store]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Mobile_Checking the Preferences]]>
+                <![CDATA[login to general store]]>
               </value>
             </param>
             <param index="2">
@@ -46,11 +46,36 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:runner.StartFramework@5649fd9b]" name="closeBrowser" is-config="true" duration-ms="2037" started-at="2020-04-11T13:18:35Z" finished-at="2020-04-11T13:18:37Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:runner.StartFramework@49139829]" name="closeBrowser" is-config="true" duration-ms="775" started-at="2020-04-11T19:12:43Z" finished-at="2020-04-11T19:12:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="endreport()[pri:0, instance:runner.StartFramework@5649fd9b]" name="endreport" is-config="true" duration-ms="5901" started-at="2020-04-11T13:18:37Z" finished-at="2020-04-11T13:18:43Z">
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:runner.StartFramework@49139829]" name="testLogin" duration-ms="139966" started-at="2020-04-11T19:12:44Z" data-provider="hybridDataRegression" finished-at="2020-04-11T19:15:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mobile_General-Store1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[login to general store1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Native]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:runner.StartFramework@49139829]" name="closeBrowser" is-config="true" duration-ms="443" started-at="2020-04-11T19:15:04Z" finished-at="2020-04-11T19:15:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="endreport()[pri:0, instance:runner.StartFramework@49139829]" name="endreport" is-config="true" duration-ms="1014" started-at="2020-04-11T19:15:04Z" finished-at="2020-04-11T19:15:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endreport -->

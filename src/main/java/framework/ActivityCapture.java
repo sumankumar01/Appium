@@ -107,7 +107,7 @@ public class ActivityCapture implements AppiumWebDriverEventListener {
 		try {
 			screenShotPath = CaptureScreenshot.capture(driver,screenShotName,StartFramework.logger);
 		   //StartFramework.logger.log(Status.PASS, "Snapshot below: " +StartFramework.logger.addScreenCaptureFromPath(screenShotPath));
-		   StartFramework.child.info("Clicking on element->"+arg0, MediaEntityBuilder.createScreenCaptureFromPath(screenShotPath).build());
+		   StartFramework.child.info("Clicking on element->"+arg0, MediaEntityBuilder.createScreenCaptureFromPath("./Screenshots/"+screenShotName).build());
 		 
 		   //StartFramework.logger.info("Screenshot").addScreenCaptureFromPath(screenShotPath);
 		

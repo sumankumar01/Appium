@@ -144,17 +144,28 @@ public class StartFramework extends Roots {
 		AppiumWebDriverEventListener driver1 = null;
 		if (Mode.equalsIgnoreCase("Native")) {
 			
-			
-			
+			File file = new File(Prop_COPA);
+			FileInputStream fs;
 
-			File fs=new File("src\\test\\resources\\ApiDemos-debug.apk");
+			
+			fs = new FileInputStream(file);
+			Properties prop = new Properties();
+			prop.load(fs);
+			fs.close();
+
+
+			File appname=new File(prop.getProperty("AppName"));
 			//File appDir = new File("src/test/resource");
 			     //File app = new File(appDir, "ApiDemos-debug.apk");
 			     DesiredCapabilities cap=new DesiredCapabilities();
 					cap.setCapability(MobileCapabilityType.DEVICE_NAME, "suman");
+					
+					cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+					
+					cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 140);
 					//cap.setCapability("autoGrantPermissions":True);
 					//cap.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.17.0");
-					cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
+					cap.setCapability(MobileCapabilityType.APP, appname.getAbsolutePath());
 					 driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
 			   
 				
@@ -666,7 +677,7 @@ public class StartFramework extends Roots {
 			
 			
 			try {
-				driver.closeApp();
+				//driver.closeApp();
 				//driver.quitApp();
 			} catch (Exception e) {
 			}
@@ -681,6 +692,7 @@ public class StartFramework extends Roots {
 
 	@AfterTest(groups = { "Regression", "Sanity" })
 	public void endreport() throws IOException, URISyntaxException {
+		driver.closeApp();
 		extent.config().statusConfigurator();
 		extent.flush();
 		File htmlFile = new File(SummaryReportFilePath);
@@ -688,12 +700,12 @@ public class StartFramework extends Roots {
 
 		
 		
-		String source = "target/Smart" + fileName + "/Screenshots";
+		/*String source = "target/Report/Smart" + fileName + "/Screenshots";
 		File srcDir = new File(source);
 
 		
 		
-		String destination = "src/test/resources/target/jenkinReport/Screenshots";
+		String destination = "src/test/resources/target/Report/jenkinReport/Screenshots";
 		
 		File f = new File(destination);
 		if (f.exists() && f.isDirectory()) {
@@ -707,7 +719,7 @@ public class StartFramework extends Roots {
 		if (!f.exists()) {
 			Boolean dir1 = new File(destination).mkdirs();
 		}
-	
+	*/
 
 		Desktop.getDesktop().browse(htmlFile.toURI());
 

@@ -60,20 +60,20 @@ public class Roots {
 	public static String fileName = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
 	public Date strDate = new Date();
 	
-	Boolean dir = new File("target/Smart"+fileName).mkdirs();
-	Boolean dir2 = new File("target/Smart"+fileName+"/HTML").mkdirs();
-	public static Boolean dir1 = new File("target/Smart"+fileName+"/Screenshots").mkdirs();
-	public static final String SummaryReportFilePath = "target/Smart"+fileName+"/SummaryTestReport_"+fileName+".html";
+	Boolean dir = new File("target/Report/Smart"+fileName).mkdirs();
+	//Boolean dir2 = new File("target/Report/Smart"+fileName+"/HTML").mkdirs();
+	public static Boolean dir1 = new File("target/Report/Smart"+fileName+"/Screenshots").mkdirs();
+	public static final String SummaryReportFilePath = "target/Report/Smart"+fileName+"/SummaryTestReport_"+fileName+".html";
 	
-	File NetorkTraffic = new File("target/Smart"+fileName+"/NetworkTraffic"+fileName+".txt");
-	public static final String jenkinsreport = "target/jenkinReport/report.html";
+	//File NetorkTraffic = new File("target/Report/Smart"+fileName+"/NetworkTraffic"+fileName+".txt");
+	//public static final String jenkinsreport = "targetReport//jenkinReport/report.html";
 	public String Prop_COPA="src/test/resources/suiteRES.properties";
-	public static final String SummaryReportFilePath2 ="target/Smart"+StartFramework.fileName+"/HTML/SummaryTestReport_1"+StartFramework.fileName+".html";
+	//public static final String SummaryReportFilePath2 ="target/Report/Smart"+StartFramework.fileName+"/HTML/SummaryTestReport_1"+StartFramework.fileName+".html";
 	
 	
 
 	
-	static File SummaryReportFilePath1=new File(SummaryReportFilePath2);
+	//static File SummaryReportFilePath1=new File(SummaryReportFilePath2);
 	
 	
 	

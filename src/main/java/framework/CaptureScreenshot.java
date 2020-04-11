@@ -18,7 +18,7 @@ public class CaptureScreenshot {
     {   
         TakesScreenshot ts = (TakesScreenshot)driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
-        String dest ="target/Report/MSmart_"+StartFramework.fileName+"/Screenshots/"+screenShotName;
+        String dest ="target/Report/Smart"+StartFramework.fileName+"/Screenshots/"+screenShotName;
        
         
         File destination = new File(dest);
@@ -32,7 +32,7 @@ public class CaptureScreenshot {
         TakesScreenshot ts = (TakesScreenshot)driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         
-        String dest ="target/Report/MSmart_"+StartFramework.fileName+"/Screenshots/"+screenShotName;
+        String dest ="target/Report/Smart"+StartFramework.fileName+"/Screenshots/"+screenShotName;
         
        
         File destination = new File(dest);
