@@ -72,3 +72,7 @@ driver.context("NATIVE_APP");
 
 driver.quit();
 
+Get Started with Remote Debugging Android Devices
+Connect Real android device to automation
+--------------------------------------
+https://developers.google.com/web/tools/chrome-devtools/remote-debugging
