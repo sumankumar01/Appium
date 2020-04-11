@@ -80,5 +80,5 @@ We can't real android device using the teamviewer also using team viewer quick s
 
 C:\WINDOWS\System32>adb devices
 List of devices attached
-********    device
+.........    device
 
