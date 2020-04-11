@@ -50,5 +50,23 @@ C:\Users\kumar\AppData\Local\Android\Sdk\tools\bin\uiautomatorviewer   applicati
 C:\Users\kumar\AppData\Local\Android\Sdk\platform-tools>adb install C:\Users\kumar\Downloads\General-Store.apk  -- install from cmd
 Performing Streamed Install
 Success
+----------------------------------------------------------------
+Automatically entering the web view context on session start
 
+driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
+Set<String> contextNames = driver.getContextHandles();
+for (String contextName : contextNames) {
+    System.out.println(contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
+}
+driver.context(contextNames.toArray()[1]); // set context to WEBVIEW_1
+
+//do some web testing
+String myText = driver.findElement(By.cssSelector(".green_button")).click();
+
+driver.context("NATIVE_APP");
+
+// do more native testing if we want
+
+driver.quit();
+-------------------------------------------------------------------
