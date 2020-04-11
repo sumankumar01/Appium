@@ -82,4 +82,7 @@ C:\WINDOWS\System32>adb devices
 List of devices attached
 07104e0f0b26    device
 
-
+Start an Android activity by providing package name and activity name
+Apk Info
+------------------------------------------------------
+http://appium.io/docs/en/commands/device/activity/start-activity/
